@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container pt-3 text-center text-success">
+
+    <h1>{{message_correct}}</h1>
+
+    {% if message_correct %}
+
+    <div class="pt-2">
+
+    <img src="/static/imgs/correct.jpg" class="rounded-circle img-fluid" name="correct" alt="Correct answer!">
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+<div class="container pt-3 text-center text-danger">
+
+    <h1>{{message}}</h1>
+
+    {% if message %}
+
+    <div class="pt-2">
+
+        <p><a href="/">Go back to guessing</a></p>
+
+        <img src="/static/imgs/cancel.jpg" class="rounded-circle img-fluid" alt="Wrong answer!">
+
+    </div>
+    {% endif %}
+</div>
+
+{% endblock content %}
